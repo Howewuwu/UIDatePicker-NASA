@@ -16,7 +16,6 @@
 		9C534CE32AB83D0D00D785E8 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 9C534CE22AB83D0D00D785E8 /* Alamofire */; };
 		9C534CE62AB842E300D785E8 /* AlamofireImage in Frameworks */ = {isa = PBXBuildFile; productRef = 9C534CE52AB842E300D785E8 /* AlamofireImage */; };
 		9C534CE82AB998EB00D785E8 /* Secrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C534CE72AB998EB00D785E8 /* Secrets.swift */; };
-		9C534CEA2AB99B7D00D785E8 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 9C534CE92AB99B7D00D785E8 /* .gitignore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,7 +28,6 @@
 		9C534CD92AB8379000D785E8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9C534CDB2AB8379000D785E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9C534CE72AB998EB00D785E8 /* Secrets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Secrets.swift; sourceTree = "<group>"; };
-		9C534CE92AB99B7D00D785E8 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,7 +46,6 @@
 		9C534CC12AB8378E00D785E8 = {
 			isa = PBXGroup;
 			children = (
-				9C534CE92AB99B7D00D785E8 /* .gitignore */,
 				9C534CE72AB998EB00D785E8 /* Secrets.swift */,
 				9C534CCC2AB8378E00D785E8 /* UIDatePicker-NASA */,
 				9C534CCB2AB8378E00D785E8 /* Products */,
@@ -143,7 +140,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9C534CEA2AB99B7D00D785E8 /* .gitignore in Resources */,
 				9C534CDA2AB8379000D785E8 /* LaunchScreen.storyboard in Resources */,
 				9C534CD72AB8379000D785E8 /* Assets.xcassets in Resources */,
 				9C534CD52AB8378E00D785E8 /* Main.storyboard in Resources */,
