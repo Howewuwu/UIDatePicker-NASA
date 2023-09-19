@@ -13,6 +13,10 @@
 		9C534CD52AB8378E00D785E8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C534CD32AB8378E00D785E8 /* Main.storyboard */; };
 		9C534CD72AB8379000D785E8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C534CD62AB8379000D785E8 /* Assets.xcassets */; };
 		9C534CDA2AB8379000D785E8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C534CD82AB8379000D785E8 /* LaunchScreen.storyboard */; };
+		9C534CE32AB83D0D00D785E8 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 9C534CE22AB83D0D00D785E8 /* Alamofire */; };
+		9C534CE62AB842E300D785E8 /* AlamofireImage in Frameworks */ = {isa = PBXBuildFile; productRef = 9C534CE52AB842E300D785E8 /* AlamofireImage */; };
+		9C534CE82AB998EB00D785E8 /* Secrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C534CE72AB998EB00D785E8 /* Secrets.swift */; };
+		9C534CEA2AB99B7D00D785E8 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 9C534CE92AB99B7D00D785E8 /* .gitignore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,8 @@
 		9C534CD62AB8379000D785E8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9C534CD92AB8379000D785E8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9C534CDB2AB8379000D785E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9C534CE72AB998EB00D785E8 /* Secrets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Secrets.swift; sourceTree = "<group>"; };
+		9C534CE92AB99B7D00D785E8 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +37,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C534CE32AB83D0D00D785E8 /* Alamofire in Frameworks */,
+				9C534CE62AB842E300D785E8 /* AlamofireImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +48,8 @@
 		9C534CC12AB8378E00D785E8 = {
 			isa = PBXGroup;
 			children = (
+				9C534CE92AB99B7D00D785E8 /* .gitignore */,
+				9C534CE72AB998EB00D785E8 /* Secrets.swift */,
 				9C534CCC2AB8378E00D785E8 /* UIDatePicker-NASA */,
 				9C534CCB2AB8378E00D785E8 /* Products */,
 			);
@@ -83,6 +93,10 @@
 			dependencies = (
 			);
 			name = "UIDatePicker-NASA";
+			packageProductDependencies = (
+				9C534CE22AB83D0D00D785E8 /* Alamofire */,
+				9C534CE52AB842E300D785E8 /* AlamofireImage */,
+			);
 			productName = "UIDatePicker-NASA";
 			productReference = 9C534CCA2AB8378E00D785E8 /* UIDatePicker-NASA.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +125,10 @@
 				Base,
 			);
 			mainGroup = 9C534CC12AB8378E00D785E8;
+			packageReferences = (
+				9C534CE12AB83D0D00D785E8 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				9C534CE42AB842E300D785E8 /* XCRemoteSwiftPackageReference "AlamofireImage" */,
+			);
 			productRefGroup = 9C534CCB2AB8378E00D785E8 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -125,6 +143,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C534CEA2AB99B7D00D785E8 /* .gitignore in Resources */,
 				9C534CDA2AB8379000D785E8 /* LaunchScreen.storyboard in Resources */,
 				9C534CD72AB8379000D785E8 /* Assets.xcassets in Resources */,
 				9C534CD52AB8378E00D785E8 /* Main.storyboard in Resources */,
@@ -139,6 +158,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9C534CD22AB8378E00D785E8 /* ViewController.swift in Sources */,
+				9C534CE82AB998EB00D785E8 /* Secrets.swift in Sources */,
 				9C534CCE2AB8378E00D785E8 /* AppDelegate.swift in Sources */,
 				9C534CD02AB8378E00D785E8 /* SceneDelegate.swift in Sources */,
 			);
@@ -298,8 +318,8 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -326,8 +346,8 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -363,6 +383,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		9C534CE12AB83D0D00D785E8 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.8.0;
+			};
+		};
+		9C534CE42AB842E300D785E8 /* XCRemoteSwiftPackageReference "AlamofireImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/AlamofireImage";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.3.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		9C534CE22AB83D0D00D785E8 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9C534CE12AB83D0D00D785E8 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		9C534CE52AB842E300D785E8 /* AlamofireImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9C534CE42AB842E300D785E8 /* XCRemoteSwiftPackageReference "AlamofireImage" */;
+			productName = AlamofireImage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 9C534CC22AB8378E00D785E8 /* Project object */;
 }
