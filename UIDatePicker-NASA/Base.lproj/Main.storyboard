@@ -28,7 +28,7 @@
                                     <action selector="datePickerChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="wog-9g-QT5"/>
                                 </connections>
                             </datePicker>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="1" maxValue="31" translatesAutoresizingMaskIntoConstraints="NO" id="FV6-SI-34X">
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="31" translatesAutoresizingMaskIntoConstraints="NO" id="FV6-SI-34X">
                                 <rect key="frame" x="14" y="735" width="347" height="31"/>
                                 <connections>
                                     <action selector="dateSliderValueChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="4ZY-5v-Oac"/>
@@ -46,7 +46,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="1" maxValue="12" translatesAutoresizingMaskIntoConstraints="NO" id="W4H-rj-kGH">
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="12" translatesAutoresizingMaskIntoConstraints="NO" id="W4H-rj-kGH">
                                 <rect key="frame" x="14" y="664" width="347" height="31"/>
                                 <connections>
                                     <action selector="monthSliderValueChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="lLS-9L-Dft"/>
@@ -58,19 +58,36 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="P16-K4-PkP">
+                                <rect key="frame" x="310" y="625" width="49" height="31"/>
+                                <connections>
+                                    <action selector="autoPlaySwitchChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="3Ua-U0-Smo"/>
+                                </connections>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Auto" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3de-Ce-70T">
+                                <rect key="frame" x="266" y="630" width="36" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="P16-K4-PkP" secondAttribute="trailing" constant="18" id="1hZ-TG-fBY"/>
+                            <constraint firstItem="P16-K4-PkP" firstAttribute="leading" secondItem="VAr-uQ-Ald" secondAttribute="trailing" constant="245" id="2jT-lp-n31"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="ZCj-WZ-kpq" secondAttribute="trailing" constant="10" id="7ax-a1-PQ5"/>
+                            <constraint firstItem="3de-Ce-70T" firstAttribute="leading" secondItem="VAr-uQ-Ald" secondAttribute="trailing" constant="201" id="7ev-r8-8Vl"/>
                             <constraint firstItem="NMz-O4-D6d" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="84U-0x-Us8"/>
                             <constraint firstItem="AUA-6c-fVB" firstAttribute="top" secondItem="ZCj-WZ-kpq" secondAttribute="bottom" constant="169" id="8UR-Jp-Qp1"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="FV6-SI-34X" secondAttribute="trailing" constant="16" id="A7w-HH-phP"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="NMz-O4-D6d" secondAttribute="trailing" constant="323" id="Aix-wP-Sg4"/>
+                            <constraint firstItem="3de-Ce-70T" firstAttribute="top" secondItem="AUA-6c-fVB" secondAttribute="bottom" constant="12" id="CFs-Ra-aLJ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="W4H-rj-kGH" secondAttribute="trailing" constant="16" id="H69-dF-Lsd"/>
                             <constraint firstItem="ZCj-WZ-kpq" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="L2V-vD-VMq"/>
                             <constraint firstItem="AUA-6c-fVB" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="ShO-IE-oqj"/>
                             <constraint firstItem="sQq-I8-sTf" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="UyT-WI-e7Z"/>
+                            <constraint firstItem="P16-K4-PkP" firstAttribute="top" secondItem="AUA-6c-fVB" secondAttribute="bottom" constant="7" id="WlG-r1-4s5"/>
                             <constraint firstItem="W4H-rj-kGH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="X8t-OR-zs6"/>
                             <constraint firstItem="W4H-rj-kGH" firstAttribute="top" secondItem="VAr-uQ-Ald" secondAttribute="bottom" constant="8" id="Y2C-lD-K2S"/>
                             <constraint firstItem="VAr-uQ-Ald" firstAttribute="top" secondItem="AUA-6c-fVB" secondAttribute="bottom" constant="17" id="YSP-cb-e9h"/>
@@ -80,7 +97,9 @@
                             <constraint firstItem="ZCj-WZ-kpq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="f3D-L5-FDF"/>
                             <constraint firstItem="ZCj-WZ-kpq" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="162" id="fkW-In-kta"/>
                             <constraint firstItem="AUA-6c-fVB" firstAttribute="top" secondItem="sQq-I8-sTf" secondAttribute="bottom" constant="8" id="h6s-YT-Zuk"/>
+                            <constraint firstItem="P16-K4-PkP" firstAttribute="leading" secondItem="3de-Ce-70T" secondAttribute="trailing" constant="8" id="jEW-B9-1qT"/>
                             <constraint firstItem="VAr-uQ-Ald" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="liJ-9u-VZX"/>
+                            <constraint firstItem="W4H-rj-kGH" firstAttribute="top" secondItem="3de-Ce-70T" secondAttribute="bottom" constant="13" id="oOg-vU-QFk"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="FV6-SI-34X" secondAttribute="bottom" constant="13" id="oYl-X1-PJQ"/>
                             <constraint firstItem="FV6-SI-34X" firstAttribute="top" secondItem="NMz-O4-D6d" secondAttribute="bottom" constant="8" id="rpW-fR-mkZ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="sQq-I8-sTf" secondAttribute="trailing" constant="16" id="t7D-UI-gst"/>
@@ -91,6 +110,7 @@
                     </view>
                     <connections>
                         <outlet property="NASAImageView" destination="sQq-I8-sTf" id="7r0-bg-D9c"/>
+                        <outlet property="autoPlaySwitchOutlet" destination="P16-K4-PkP" id="6kJ-NC-lNi"/>
                         <outlet property="datePickerOuelet" destination="AUA-6c-fVB" id="NxR-hS-rBJ"/>
                         <outlet property="dateSliderOutlet" destination="FV6-SI-34X" id="Gny-VO-mhd"/>
                         <outlet property="errorLabel" destination="ZCj-WZ-kpq" id="ywO-yS-3X0"/>
