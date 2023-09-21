@@ -31,6 +31,12 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         fetchAndSetNASAImage(for: Date())
+        let date = Date()
+        let calender = Calendar.current
+        let Month = calender.component(Calendar.Component.month, from: date)
+        let today = calender.component(Calendar.Component.day, from: date)
+        monthSliderOuelet.value = Float(Month)
+        dateSliderOutlet.value = Float(today)
         
         
         
@@ -42,6 +48,11 @@ class ViewController: UIViewController {
     @IBAction func datePickerChange(_ sender: UIDatePicker) {
         
         fetchAndSetNASAImage(for: sender.date)
+        let calender = Calendar.current
+        let month = calender.component(Calendar.Component.month, from: sender.date)
+        monthSliderOuelet.value = Float(month)
+        let day = calender.component(Calendar.Component.day, from: sender.date)
+        dateSliderOutlet.value = Float(day)
         
     }
     
@@ -50,7 +61,15 @@ class ViewController: UIViewController {
     
     
     @IBAction func monthSliderValueChange(_ sender: UISlider) {
+        let selectedMonth = Int(sender.value)
         
+        var dateComponents = Calendar.current.dateComponents([.year, .month, .day], from: datePickerOuelet.date)
+        dateComponents.month = selectedMonth
+        
+        if let newDate = Calendar.current.date(from: dateComponents) {
+            datePickerOuelet.setDate(newDate, animated: true)
+        }
+        fetchAndSetNASAImage(for: datePickerOuelet.date)
         
     }
     
@@ -58,7 +77,17 @@ class ViewController: UIViewController {
     
     
     
+    
     @IBAction func dateSliderValueChange(_ sender: UISlider) {
+        let selectedDay = Int(sender.value)
+        
+        var dateComponents = Calendar.current.dateComponents([.year, .month, .day], from: datePickerOuelet.date)
+        dateComponents.day = selectedDay
+        
+        if let newDate = Calendar.current.date(from: dateComponents) {
+            datePickerOuelet.setDate(newDate, animated: true)
+        }
+        fetchAndSetNASAImage(for: datePickerOuelet.date)
         
         
     }
@@ -98,11 +127,10 @@ class ViewController: UIViewController {
             
             if let imageUrl = imageUrl {
                 self.NASAImageView.af.setImage(withURL: imageUrl)
-                errorLabel.text = ""
+                self.errorLabel.text = ""
             } else {
-                // 你也可以設置一個預設的錯誤圖片或顯示錯誤訊息
                 self.NASAImageView.image = nil
-                errorLabel.text = "NASA 今天休假"
+                self.errorLabel.text = "NASA 這天沒開工"
             }
         }
     }
